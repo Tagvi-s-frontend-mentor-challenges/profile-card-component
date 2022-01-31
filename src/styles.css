@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  background: hsl(185deg, 75%, 39%);
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 80vw;
+  max-width: 1400px;
+  aspect-ratio: 1;
+  background-size: cover;
+  z-index: -1;
+  top: -30vw;
+  left: -30vw;
+  background-image: url(./images/bg-pattern-top.svg);
+}
+body::after {
+  content: "";
+  position: absolute;
+  width: 80vw;
+  max-width: 1400px;
+  aspect-ratio: 1;
+  background-size: cover;
+  z-index: -1;
+  bottom: -30vw;
+  right: -30vw;
+  background-image: url(./images/bg-pattern-bottom.svg);
+}
+
+main {
+  background-color: white;
+  border-radius: 20px;
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+main img {
+  border-radius: 50%;
+  border: 5px solid white;
+  width: 100px;
+  aspect-ratio: 1;
+  margin-top: 100px;
+}
+main p {
+  font-size: 1.2rem;
+  color: hsl(227deg, 10%, 46%);
+}
+main .info-main {
+  display: flex;
+  align-items: flex-end;
+  margin: 10px 0;
+  gap: 10px;
+}
+main .info-main h1 {
+  font-size: 1.5rem;
+}
+main .activity {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  padding: 20px 50px;
+  position: relative;
+  justify-content: space-between;
+  gap: 10px;
+}
+main .activity::before {
+  width: 100%;
+  height: 1px;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsl(0deg, 0%, 59%);
+  opacity: 50%;
+}
+main .activity div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .activity div p:not(:first-child) {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+}
+main .activity div p:first-child {
+  font-weight: bold;
+  color: hsl(229deg, 23%, 23%);
+}
